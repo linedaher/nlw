@@ -8,7 +8,7 @@ class LinksRepository:
     def registry_link(self, link_infos: Dict) -> None:
         cursor = self.__conn.cursor()
         cursor.execute(
-           '''
+            '''
                 INSERT INTO links
                     (id, trip_id, link, title)
                 VALUES

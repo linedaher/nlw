@@ -26,4 +26,4 @@ def test_find_emails_from_trip():
 
     emails = emails_to_invite_repository.find_emails_from_trip(trip_id)
     print()
-    print(emails)    
+    print(emails)
