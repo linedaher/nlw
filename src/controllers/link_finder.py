@@ -2,7 +2,7 @@ class LinkFinder:
     def __init__(self, link_repository) -> None:
         self.__link_repository = link_repository
 
-    def find(self,tripId):  
+    def find(self, tripId):
         try:
             links = self.__link_repository.find_links_from_trip(tripId)
 
@@ -16,9 +16,10 @@ class LinkFinder:
             return {
                 "body": { "links": formatted_links },
                 "status_code": 200
-            }    
+            }
         except Exception as exception:
             return {
                 "body": { "error": "Bad Request", "message": str(exception) },
                 "status_code": 400
             }
+        
